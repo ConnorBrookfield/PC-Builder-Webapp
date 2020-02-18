@@ -1,8 +1,8 @@
 import React from 'react';
-// import DefaultAlbumsLibrary from "./components/defaultAlbumsLibrary";
-// import AddAlbum from './components/addAlbum';
-// import EditAlbum from "./components/editAlbum";
-// import AlbumsLibrary from './components/albumsLibrary';
+import Home from './components/home';
+import About from './components/about';
+import BuildPC from './components/buildPC';
+import Contact from './components/contact';
 import './App.css';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,21 +13,21 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar className="navbar-dark bg-dark">
+        <Navbar className="navbar-dark">
         <a class="navbar-brand" href="/">PcBuilderPro</a>
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/buildPC">Build a PC</Nav.Link>
-            <Nav.Link href="/contacts">Contacts</Nav.Link>
+            <Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/contact">Contact Us</Nav.Link>
           </Nav>
         </Navbar>
         <br/>
         <Switch>
-          {/* <Route exact path='/' component={DefaultAlbumsLibrary}/>
-          <Route exact path='/addAlbum' component={AddAlbum}/>
-          <Route exact path='/albumsLibrary' component={AlbumsLibrary}/>
-          <Route exact path='/editAlbum/:id' component={EditAlbum}/> */}
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/about' component={About}/>
+          <Route exact path='/buildPC' component={BuildPC}/>
+          <Route exact path='/contact' component={Contact}/>
         </Switch>
       </div>
     </BrowserRouter>
