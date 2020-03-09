@@ -6,7 +6,7 @@ class About extends React.Component{
 
   render(){
     return(
-      <div>
+      <div class="bodyFormat">
           <h1>Insert Stuff in these DIVS - About page</h1>
       </div>
     )
