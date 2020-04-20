@@ -6,6 +6,7 @@ import Rams from "./rams";
 import Gpus from "./gpus";
 import Coolers from "./coolers";
 import Storages from "./storages";
+import Psus from "./psus";
 import '../App.css';
 import axios from "axios";
 import { CardDeck } from 'react-bootstrap';
@@ -19,7 +20,8 @@ class BuildPC extends React.Component{
     rams: [],
     gpus: [],
     coolers: [],
-    storages: []
+    storages: [],
+    psus: []
   };
 
   componentDidMount() {
@@ -78,6 +80,13 @@ class BuildPC extends React.Component{
     .catch((error)=>{
         console.log(error);
     });
+    axios.get('http://localhost:4000/api/psus')
+    .then((response)=>{
+        this.setState({psus: response.data.psus})
+    })
+    .catch((error)=>{
+        console.log(error);
+    });
 }
 
   render(){
@@ -112,6 +121,10 @@ class BuildPC extends React.Component{
           <h2>STORAGES</h2>
           <CardDeck>
             <Storages theStorages={this.state.storages} ReloadDataMethod={this.ReloadDataMethod}></Storages>              
+          </CardDeck>
+          <h2>PSU'S</h2>
+          <CardDeck>
+            <Psus thePsus={this.state.psus} ReloadDataMethod={this.ReloadDataMethod}></Psus>              
           </CardDeck>
       </div>
     )
