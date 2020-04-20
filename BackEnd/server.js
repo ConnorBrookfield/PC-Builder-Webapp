@@ -89,6 +89,11 @@ const psuSchema = new Schema({
     watts:String,
     artwork:String
 })
+const forumSchema = new Schema({
+    name:String,
+    email:String,
+    feedback:String
+})
 
 // Mongoose Models
 const CaseModel = mongoose.model('case', caseSchema);
@@ -99,6 +104,7 @@ const GpuModel = mongoose.model('gpu', gpuSchema);
 const CoolerModel = mongoose.model('cooler', coolerSchema);
 const StorageModel = mongoose.model('storage', storageSchema);
 const PsuModel = mongoose.model('psu', psuSchema);
+const ForumModel = mongoose.model('forum', forumSchema);
 
 // Handling various requests from client, to the server, to the relevent databases.
 // Get Requests
@@ -201,6 +207,18 @@ app.get('/api/psus:id', (req, res) => {
         res.json(data);
     })
 })
+app.get('/api/forums', (req, res) => {
+    ForumModel.find((error, data) =>{
+        res.json({forums:data});
+    })
+})
+app.get('/api/forums:id', (req, res) => {
+    console.log(req.params.id);
+
+    ForumModel.findById(req.params.id, (error,data)=>{
+        res.json(data);
+    })
+})
 
 // Delete Requests
 app.delete('/api/cases/:id', (req, res)=>{
@@ -267,7 +285,14 @@ app.delete('/api/psus/:id', (req, res)=>{
             res.json(data);
         })
 })
+app.delete('/api/forums/:id', (req, res)=>{
+    console.log(req.params.id);
 
+    ForumModel.deleteOne({_id: req.params.id},
+        (error, data) =>{
+            res.json(data);
+        })
+})
 // Post Requests
 app.post('/api/cases', (req,res)=>{
     console.log('Post request Successful');
@@ -565,6 +590,32 @@ app.post('/api/psus/:id', (req,res)=>{
     })
     res.json('post received!');
 })
+app.post('/api/forums', (req,res)=>{
+    console.log('Post request Successful');
+    console.log(req.body.name);
+    console.log(req.body.email);
+    console.log(req.body.feedback);
+
+    ForumModel.create({
+        name:req.body.name,
+        email:req.body.email,
+        feedback:req.body.feedback
+    })
+    res.json('post received!');
+})
+app.post('/api/forums/:id', (req,res)=>{
+    console.log('Post request Successful');
+    console.log(req.body.name);
+    console.log(req.body.email);
+    console.log(req.body.feedback);
+
+    ForumModel.create({
+        name:req.body.name,
+        email:req.body.email,
+        feedback:req.body.feedback
+    })
+    res.json('post received!');
+})
 
 // Put Requests
 app.put("/api/cases/:id", (req, res)=>{
@@ -628,6 +679,14 @@ app.put("/api/psus/:id", (req, res)=>{
     console.log(req.body);
 
     PsuModel.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, data)=>{
+        res.json(data);
+    })
+})
+app.put("/api/forums/:id", (req, res)=>{
+    console.log("Edit: " + req.params.id);
+    console.log(req.body);
+
+    ForumModel.findByIdAndUpdate(req.params.id, req.body, {new:true}, (error, data)=>{
         res.json(data);
     })
 })

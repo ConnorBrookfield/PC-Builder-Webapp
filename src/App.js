@@ -19,7 +19,7 @@ function App() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/buildPC">Build a PC</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/adminPanel">ADMIN PANEL *REMOVE*</Nav.Link>
           </Nav>
         </Navbar>
