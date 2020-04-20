@@ -56,32 +56,34 @@ class AdminPanel extends React.Component {
   render() {
     return (
       <div>
+        <div>
         <h1><b>Add a new case!</b></h1>
-        <div class="centerElement">
-          <Form onSubmit={this.handleSubmit}>
-            <Form.Group>
-              <Form.Label>Case Brand</Form.Label>
-              <Form.Control as="input" value={this.state.Brand} onChange={this.handleBrandChange}/>
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Case Name</Form.Label>
-              <Form.Control as="input" value={this.state.Name} onChange={this.handleNameChange}/>
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Price</Form.Label>
-              <Form.Control as="input" value={this.state.Price} onChange={this.handlePriceChange}/>
-            </Form.Group>
-            <Form.Group>
-              <Form.Label>Size</Form.Label>
-              <Form.Control as="input" value={this.state.Size} onChange={this.handleSizeChange}/>
-            </Form.Group>            
-            <Form.Group>
-              <Form.Label>Case Artwork</Form.Label>
-              <Form.Control as="textarea" value={this.state.Artwork} onChange={this.handleArtworkChange}/>
-            </Form.Group>
+          <div class="centerElement">
+            <Form onSubmit={this.handleSubmit}>
+              <Form.Group>
+                <Form.Label>Case Brand</Form.Label>
+                <Form.Control as="input" value={this.state.Brand} onChange={this.handleBrandChange}/>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Case Name</Form.Label>
+                <Form.Control as="input" value={this.state.Name} onChange={this.handleNameChange}/>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Price</Form.Label>
+                <Form.Control as="input" value={this.state.Price} onChange={this.handlePriceChange}/>
+              </Form.Group>
+              <Form.Group>
+                <Form.Label>Size</Form.Label>
+                <Form.Control as="input" value={this.state.Size} onChange={this.handleSizeChange}/>
+              </Form.Group>            
+              <Form.Group>
+                <Form.Label>Case Artwork</Form.Label>
+                <Form.Control as="textarea" value={this.state.Artwork} onChange={this.handleArtworkChange}/>
+              </Form.Group>
 
-            <Button variant="primary" type="submit">Add Case</Button>
-          </Form>
+              <Button variant="primary" type="submit">Add Case</Button>
+            </Form>
+          </div>
         </div>
       </div>
     );
