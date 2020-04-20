@@ -9,9 +9,9 @@ class About extends React.Component{
       <div>
         <h1>PCBuilderPro</h1>
         <div class="bodyFormat">
-          <div class="slideshowFormat">
+          <div >
             <h2>Click on image(s) to see product further</h2>
-            <Carousel>
+            <Carousel class="slideshowFormat">
               <Carousel.Item>
                 <a href="https://www.nvidia.com/en-gb/geforce/graphics-cards/rtx-2080-ti/">
                 <img

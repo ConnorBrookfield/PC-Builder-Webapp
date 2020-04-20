@@ -19,8 +19,14 @@
 
 .imageFormat {
   height: 600px;
-  width: 100%;
+  width: 90%;
   border-radius: 30px;
+  margin: 2em;
+}
+
+.slideshowFormat {
+  border-radius: 30px;
+  margin: 2em;
 }
 
 .bodyFormat {
