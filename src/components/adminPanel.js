@@ -8,13 +8,20 @@ class AdminPanel extends React.Component {
   constructor(props){
     super(props);
 
-    this.state = { Brand:"", Name:"", Price:"", Size:"", Artwork:"", Cores:"", Capacity:"", Clockspeed:"", Memory:"", Type: "", Watts:""};
+    this.state = { Brand:"", Name:"", Price:"", Size:"", Cores:"", Capacity:"", Clockspeed:"", Memory:"", Type: "", Watts:"", Artwork:""};
 
     this.dropDownOptions = ["caseInput", "cpuInput", "motherboardInput", "gpuInput", "psuInput", "ramInput", "storageInput", "coolingInput"];
 
     // Handle Methods - Submits
     this.handleCaseSubmit = this.handleCaseSubmit.bind(this);
     this.handleCpuSubmit = this.handleCpuSubmit.bind(this);
+    this.handleMotherboardSubmit = this.handleMotherboardSubmit.bind(this);
+    this.handleGpuSubmit = this.handleGpuSubmit.bind(this);
+    this.handlePsuSubmit = this.handlePsuSubmit.bind(this);
+    this.handleRamSubmit = this.handleRamSubmit.bind(this);
+    this.handleStorageSubmit = this.handleStorageSubmit.bind(this);
+    this.handleCoolerSubmit = this.handleCoolerSubmit.bind(this);
+
 
     // Handle Methods - Variables
     this.handleBrandChange = this.handleBrandChange.bind(this);
@@ -24,6 +31,8 @@ class AdminPanel extends React.Component {
     this.handleArtworkChange = this.handleArtworkChange.bind(this);
     this.handleCapacityChange = this.handleCapacityChange.bind(this);
     this.handleClockspeedChange = this.handleClockspeedChange.bind(this);
+    this.handleCoresChange = this.handleCoresChange.bind(this);
+    this.handleSocketChange = this.handleSocketChange.bind(this);
     this.handleMemoryChange = this.handleMemoryChange.bind(this);
     this.handleTypeChange = this.handleTypeChange.bind(this);
     this.handleWattChange = this.handleWattChange.bind(this);
@@ -64,11 +73,14 @@ class AdminPanel extends React.Component {
   handleClockspeedChange(e){
     this.setState({Clockspeed: e.target.value});
   }
+  handleSocketChange(e){
+    this.setState({Socket: e.target.value});
+  }
   handleMemoryChange(e){
-    this.setState({Clockspeed: e.target.value});
+    this.setState({Memory: e.target.value});
   }
   handleTypeChange(e){
-    this.setState({Clockspeed: e.target.value});
+    this.setState({Type: e.target.value});
   }
   handleWattChange(e){
     this.setState({Watts: e.target.value});
@@ -102,6 +114,7 @@ class AdminPanel extends React.Component {
       price: this.state.Price,
       clockspeed: this.state.Clockspeed,
       cores: this.state.Cores,
+      socket: this.state.Socket,
       artwork: this.state.Artwork
     };
 
@@ -110,7 +123,7 @@ class AdminPanel extends React.Component {
     .then()
     .catch();
 
-    this.setState({ Brand:"", Name:"", Price:"", Clockspeed:"", Cores:"", Artwork:"" });    
+    this.setState({ Brand:"", Name:"", Price:"", Clockspeed:"", Cores:"", Socket:"", Artwork:"" });    
   }
   handleMotherboardSubmit(e){
     e.preventDefault();
@@ -376,15 +389,15 @@ class AdminPanel extends React.Component {
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Clockspeed</Form.Label>
-                  <Form.Control as="input" value={this.state.clockspeed} onChange={this.handleSizeChange}/>
+                  <Form.Control as="input" value={this.state.Clockspeed} onChange={this.handleClockspeedChange}/>
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Cores</Form.Label>
-                  <Form.Control as="input" value={this.state.cores} onChange={this.handleSizeChange}/>
+                  <Form.Control as="input" value={this.state.Cores} onChange={this.handleCoresChange}/>
                 </Form.Group>   
                 <Form.Group>
                   <Form.Label>Socket</Form.Label>
-                  <Form.Control as="input" value={this.state.socket} onChange={this.handleSizeChange}/>
+                  <Form.Control as="input" value={this.state.Socket} onChange={this.handleSocketChange}/>
                 </Form.Group>               
                 <Form.Group>
                   <Form.Label>Artwork</Form.Label>
@@ -415,7 +428,7 @@ class AdminPanel extends React.Component {
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Size</Form.Label>
-                  <Form.Control as="input" value={this.state.size} onChange={this.handleSizeChange}/>
+                  <Form.Control as="input" value={this.state.Size} onChange={this.handleSizeChange}/>
                 </Form.Group>       
                 <Form.Group>
                   <Form.Label>Artwork</Form.Label>
@@ -446,11 +459,11 @@ class AdminPanel extends React.Component {
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Clockspeed</Form.Label>
-                  <Form.Control as="input" value={this.state.clockspeed} onChange={this.handleClockspeedChange}/>
+                  <Form.Control as="input" value={this.state.Clockspeed} onChange={this.handleClockspeedChange}/>
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Memory</Form.Label>
-                  <Form.Control as="input" value={this.state.memory} onChange={this.handleMemoryChange}/>
+                  <Form.Control as="input" value={this.state.Memory} onChange={this.handleMemoryChange}/>
                 </Form.Group>              
                 <Form.Group>
                   <Form.Label>Artwork</Form.Label>
@@ -513,11 +526,11 @@ class AdminPanel extends React.Component {
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Clockspeed</Form.Label>
-                  <Form.Control as="input" value={this.state.clockspeed} onChange={this.handleClockspeedChange}/>
+                  <Form.Control as="input" value={this.state.Clockspeed} onChange={this.handleClockspeedChange}/>
                 </Form.Group>
                 <Form.Group>
                   <Form.Label>Memory</Form.Label>
-                  <Form.Control as="input" value={this.state.memory} onChange={this.handleMemoryChange}/>
+                  <Form.Control as="input" value={this.state.Memory} onChange={this.handleMemoryChange}/>
                 </Form.Group>              
                 <Form.Group>
                   <Form.Label>Artwork</Form.Label>
