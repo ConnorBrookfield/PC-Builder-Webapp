@@ -12,6 +12,7 @@ constructor(){
 render(){
     return(
 <div>
+      <br></br>
       {this.props.forum.name} 
       <br></br>
       {this.props.forum.email}
