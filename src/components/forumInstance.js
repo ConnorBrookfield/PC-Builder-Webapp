@@ -11,13 +11,17 @@ constructor(){
 
 render(){
     return(
-        <div>
-        {this.props.forum.name} 
-        <br></br>
-        {this.props.forum.email}
-        <br></br>
-        {this.props.forum.feedback}        
-        </div>      
+<div>
+      <br></br>
+      {this.props.forum.name} 
+      <br></br>
+      {this.props.forum.email}
+      <br></br>
+      {this.props.forum.feedback}
+
+            
+</div>
+        
       )
     }
 }

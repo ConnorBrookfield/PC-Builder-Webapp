@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import '../App.css';
 
 class Query extends React.Component {
  constructor(props){
@@ -51,7 +52,7 @@ class Query extends React.Component {
               <div className="App">
               <h1><b>Query Page</b></h1>
               <h2>If You have a Query that needs help leave a comment and us or our community will help!</h2>
-
+              <div class="bodyFormat">
               <div class="centerElement">
               <Form onSubmit={this.handleQuerySubmit}>
               <Form.Group>
@@ -68,6 +69,7 @@ class Query extends React.Component {
                 </Form.Group>
                 <Button variant="primary" type="submit">Add Query</Button>
               </Form>
+              </div>
               </div>
           </div>
           </div>

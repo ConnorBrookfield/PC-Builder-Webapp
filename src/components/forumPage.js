@@ -2,6 +2,7 @@ import React from 'react';
 import Forums from "./forums";
 import '../App.css';
 import axios from "axios";
+import { CardDeck } from 'react-bootstrap';
 
 
 class ForumPage extends React.Component{
@@ -26,7 +27,9 @@ class ForumPage extends React.Component{
           <h1>Forum Page!</h1>
           <h2>Welcome to the Forum page where your Querys are recieved for the community to see!!</h2>
           <div class="bodyFormat">
+           
             <Forums theForums={this.state.forums} ReloadDataMethod={this.ReloadDataMethod}></Forums>
+            
           </div>
         </div>
       )
