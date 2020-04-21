@@ -3,32 +3,30 @@ import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
 import '../App.css';
 import AdminPanel from './adminPanel';
-import { Switch, Route, BrowserRouter } from "react-router-dom";
+import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 
 class Login extends React.Component{
     constructor(props){
         super(props);
         
         // Variables
-        this.state = {Username:"", Password:""}
+        this.state = {Email: null, Password: null}
 
         // Handle Methods
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleUsername = this.handleUsername.bind(this);
+        this.handleEmail = this.handleEmail.bind(this);
         this.handlePassword = this.handlePassword.bind(this);
     }
 
     // Handle Methods
-    handleSubmit(e){
-        e.preventDefault();
+    handleSubmit(){
 
-        if(this.state.Username == "Admin" && this.state.Password == "badCode"){
-
-
+        if(this.state.Email == "Admin@gmit.ie" && this.state.Password == "badCode"){
+            this.props.history.push('/adminPanel');
         }
     }
-    handleUsername(e){
-        this.setState({Username: e.target.value});       
+    handleEmail(e){
+        this.setState({Email: e.target.value});       
     }
     handlePassword(e){
         this.setState({Password: e.target.value});
@@ -44,7 +42,7 @@ class Login extends React.Component{
                             <Form.Group controlId="formBasicEmail">
                                 <br></br>
                                 <Form.Label>Email address</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email"/>
+                                <Form.Control type="email" placeholder="Enter email" onChange={this.handleEmail}/>
                                 <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                                 </Form.Text>
@@ -52,7 +50,7 @@ class Login extends React.Component{
 
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password"/>
+                                <Form.Control type="password" placeholder="Password" onChange={this.handlePassword}/>
                             </Form.Group>
                             <Button variant="primary" type="submit">
                                 Submit
