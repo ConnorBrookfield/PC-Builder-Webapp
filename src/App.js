@@ -15,24 +15,24 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar className="navbar-dark navBarOpacity">
-        <a class="navbar-brand" href="/">PcBuilderPro</a>
+        <a class="navbar-brand" href="/home">PcBuilderPro</a>
           <Nav>
-            {/* <Nav.Link href="/">login</Nav.Link> */}
             <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/buildPC">Build a PC</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
             <Nav.Link href="/adminPanel">ADMIN PANEL *REMOVE*</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar>
         <br/>
         <Switch>
-          <Route exact path='/' component={Login}/>
           <Route exact path='/home' component={Home}/>
           <Route exact path='/about' component={About}/>
           <Route exact path='/buildPC' component={BuildPC}/>
           <Route exact path='/contact' component={Contact}/>
           <Route exact path='/adminPanel' component={AdminPanel}/>
+          <Route exact path='/login' component={Login}/>
         </Switch>
       </div>
     </BrowserRouter>

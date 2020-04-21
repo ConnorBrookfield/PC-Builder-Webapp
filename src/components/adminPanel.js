@@ -365,11 +365,9 @@ class AdminPanel extends React.Component {
                   <Form.Label>Artwork</Form.Label>
                   <Form.Control as="input" value={this.state.Artwork} onChange={this.handleArtworkChange}/>
                 </Form.Group>
-
                 <Button variant="primary" type="submit">Add Case</Button>
               </Form>
             </div>
-
           </div>
           <div id="cpuInput" hidden="true">
             <h1>Add a new CPU!</h1>
@@ -403,12 +401,10 @@ class AdminPanel extends React.Component {
                   <Form.Label>Artwork</Form.Label>
                   <Form.Control as="input" value={this.state.Artwork} onChange={this.handleArtworkChange}/>
                 </Form.Group>
-
                 <Button variant="primary" type="submit">Add Cpu</Button>
                 <br/>
               </Form>
             </div>
-
           </div>          
           <div id="motherboardInput" hidden="true">
             <h1>Add a new Motherboard!</h1>
@@ -434,12 +430,10 @@ class AdminPanel extends React.Component {
                   <Form.Label>Artwork</Form.Label>
                   <Form.Control as="input" value={this.state.Artwork} onChange={this.handleArtworkChange}/>
                 </Form.Group>
-
                 <Button variant="primary" type="submit">Add Motherboard</Button>
                 <br/>
               </Form>
             </div>
-
           </div>
           <div id="gpuInput" hidden="true">
             <h1>Add a new Graphics Card!</h1>
@@ -473,7 +467,6 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
-
           </div>   
           <div id="psuInput" hidden="true">
             <h1>Add a new Power Supply!</h1>
@@ -602,7 +595,7 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
-        </div>
+          </div>
         </div>
       </div>
     );
