@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 class MotherboardInstance extends React.Component{
@@ -24,6 +24,7 @@ class MotherboardInstance extends React.Component{
                 {this.props.motherboard.size}
               </Card.Subtitle>        
             </Card.Body>
+            <Button variant="primary">Click To Buy</Button>
           </Card>
       </div>
     )

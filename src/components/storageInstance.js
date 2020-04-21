@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 class StorageInstance extends React.Component{
@@ -26,6 +26,7 @@ class StorageInstance extends React.Component{
                 {this.props.storage.capacity}
               </Card.Subtitle>        
             </Card.Body>
+            <Button variant="primary">Click To Buy</Button>
           </Card>
       </div>
     )

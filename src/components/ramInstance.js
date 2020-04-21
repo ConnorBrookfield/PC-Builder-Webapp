@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 class RamInstance extends React.Component{
@@ -28,6 +28,7 @@ class RamInstance extends React.Component{
                 {this.props.ram.socket}
               </Card.Subtitle>        
             </Card.Body>
+            <Button variant="primary">Click To Buy</Button>
           </Card>
       </div>
     )

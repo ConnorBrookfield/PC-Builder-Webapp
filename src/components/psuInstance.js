@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
+import Button from 'react-bootstrap/Button';
 import '../App.css';
 
 class PsuInstance extends React.Component{
@@ -26,6 +26,7 @@ class PsuInstance extends React.Component{
                 {this.props.psu.watts}
               </Card.Subtitle>        
             </Card.Body>
+            <Button variant="primary">Click To Buy</Button>
           </Card>
       </div>
     )

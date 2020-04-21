@@ -1,6 +1,8 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
+import Button from 'react-bootstrap/Button';
+
 import '../App.css';
 
 class CaseInstance extends React.Component{
@@ -24,6 +26,7 @@ class CaseInstance extends React.Component{
                 {this.props.pcCase.size}
               </Card.Subtitle>        
             </Card.Body>
+            <Button variant="primary">Click To Buy</Button>
           </Card>
       </div>
     )

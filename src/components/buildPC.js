@@ -100,7 +100,7 @@ class BuildPC extends React.Component{
             </CardDeck>
             <h1>MotherBoards</h1>
             <CardDeck>
-              <Motherboards theMotherboards={this.state.motherboards} ReloadDataMethod={this.ReloadDataMethod}></Motherboards>              
+              <Motherboards theMotherboards={this.state.motherboards} ReloadDataMethod={this.ReloadDataMethod} ></Motherboards>            
             </CardDeck>
             <h1>CPU'S</h1>
             <CardDeck>

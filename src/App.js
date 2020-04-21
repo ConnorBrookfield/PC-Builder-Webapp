@@ -4,6 +4,7 @@ import About from './components/about';
 import BuildPC from './components/buildPC';
 import Contact from './components/contact';
 import AdminPanel from './components/adminPanel';
+import Login from './components/login';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav } from "react-bootstrap";
@@ -16,7 +17,8 @@ function App() {
         <Navbar className="navbar-dark navBarOpacity">
         <a class="navbar-brand" href="/">PcBuilderPro</a>
           <Nav>
-            <Nav.Link href="/">Home</Nav.Link>
+            {/* <Nav.Link href="/">login</Nav.Link> */}
+            <Nav.Link href="/home">Home</Nav.Link>
             <Nav.Link href="/buildPC">Build a PC</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
@@ -25,7 +27,8 @@ function App() {
         </Navbar>
         <br/>
         <Switch>
-          <Route exact path='/' component={Home}/>
+          <Route exact path='/' component={Login}/>
+          <Route exact path='/home' component={Home}/>
           <Route exact path='/about' component={About}/>
           <Route exact path='/buildPC' component={BuildPC}/>
           <Route exact path='/contact' component={Contact}/>
