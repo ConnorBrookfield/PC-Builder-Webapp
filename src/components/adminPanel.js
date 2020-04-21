@@ -22,7 +22,6 @@ class AdminPanel extends React.Component {
     this.handleStorageSubmit = this.handleStorageSubmit.bind(this);
     this.handleCoolerSubmit = this.handleCoolerSubmit.bind(this);
 
-
     // Handle Methods - Variables
     this.handleBrandChange = this.handleBrandChange.bind(this);
     this.handleNameChange = this.handleNameChange.bind(this);

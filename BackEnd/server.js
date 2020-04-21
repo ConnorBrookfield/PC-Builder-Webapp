@@ -116,7 +116,7 @@ app.get('/api/cases', (req, res) => {
         res.json({cases:data});
     })
 })
-app.get('/api/cases:id', (req, res) => {
+app.get('/api/cases/:id', (req, res) => {
     console.log(req.params.id);
 
     CaseModel.findById(req.params.id, (error,data)=>{
@@ -128,7 +128,7 @@ app.get('/api/motherboards', (req, res) => {
         res.json({motherboards:data});
     })
 })
-app.get('/api/motherboards:id', (req, res) => {
+app.get('/api/motherboards/:id', (req, res) => {
     console.log(req.params.id);
 
     MotherboardModel.findById(req.params.id, (error,data)=>{
@@ -140,7 +140,7 @@ app.get('/api/cpus', (req, res) => {
         res.json({cpus:data});
     })
 })
-app.get('/api/cpus:id', (req, res) => {
+app.get('/api/cpus/:id', (req, res) => {
     console.log(req.params.id);
 
     CpuModel.findById(req.params.id, (error,data)=>{
@@ -152,7 +152,7 @@ app.get('/api/rams', (req, res) => {
         res.json({rams:data});
     })
 })
-app.get('/api/rams:id', (req, res) => {
+app.get('/api/rams/:id', (req, res) => {
     console.log(req.params.id);
 
     RamModel.findById(req.params.id, (error,data)=>{
@@ -164,7 +164,7 @@ app.get('/api/gpus', (req, res) => {
         res.json({gpus:data});
     })
 })
-app.get('/api/gpus:id', (req, res) => {
+app.get('/api/gpus/:id', (req, res) => {
     console.log(req.params.id);
 
     GpuModel.findById(req.params.id, (error,data)=>{
@@ -176,7 +176,7 @@ app.get('/api/coolers', (req, res) => {
         res.json({coolers:data});
     })
 })
-app.get('/api/coolers:id', (req, res) => {
+app.get('/api/coolers/:id', (req, res) => {
     console.log(req.params.id);
 
     CoolerModel.findById(req.params.id, (error,data)=>{
@@ -188,7 +188,7 @@ app.get('/api/storages', (req, res) => {
         res.json({storages:data});
     })
 })
-app.get('/api/storages:id', (req, res) => {
+app.get('/api/storages/:id', (req, res) => {
     console.log(req.params.id);
 
     StorageModel.findById(req.params.id, (error,data)=>{
@@ -200,7 +200,7 @@ app.get('/api/psus', (req, res) => {
         res.json({psus:data});
     })
 })
-app.get('/api/psus:id', (req, res) => {
+app.get('/api/psus/:id', (req, res) => {
     console.log(req.params.id);
 
     PsuModel.findById(req.params.id, (error,data)=>{
@@ -212,7 +212,7 @@ app.get('/api/forums', (req, res) => {
         res.json({forums:data});
     })
 })
-app.get('/api/forums:id', (req, res) => {
+app.get('/api/forums/:id', (req, res) => {
     console.log(req.params.id);
 
     ForumModel.findById(req.params.id, (error,data)=>{

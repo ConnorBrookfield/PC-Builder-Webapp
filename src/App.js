@@ -7,6 +7,7 @@ import AdminPanel from './components/adminPanel';
 import Query from './components/query';
 import Login from './components/login';
 import ForumPage from './components/forumPage';
+import Basket from './components/basket';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, NavDropdown, Nav } from "react-bootstrap";
@@ -16,7 +17,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Navbar className="navbar-dark navBarOpacity">
+        <Navbar className="navbar-dark navBarOpacity" sticky="top">
         <a class="navbar-brand" href="/">PcBuilderPro</a>
           <Nav>
             <Nav.Link href="/home">Home</Nav.Link>
@@ -27,6 +28,7 @@ function App() {
             <NavDropdown.Item href="/forumPage">Forum Page</NavDropdown.Item>
             </NavDropdown>
             <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/basket">Basket</Nav.Link>
           </Nav>
         </Navbar>
         <br/>
@@ -40,6 +42,7 @@ function App() {
           <Route exact path='/login' component={Login}/>
           <Route exact path='/query' component={Query}/>
           <Route exact path='/forumPage' component={ForumPage}/>
+          <Route exact path='/basket' component={Basket}/>
         </Switch>
       </div>
     </BrowserRouter>

@@ -7,6 +7,14 @@ class StorageInstance extends React.Component{
 
   constructor(){
     super();
+
+    // Methods
+    this.addToBasket = this.addToBasket.bind(this);
+  }
+
+  // Methods
+  addToBasket(e){
+    sessionStorage.setItem(e.target.id, e.target.value);
   }
 
   render(){
@@ -26,7 +34,7 @@ class StorageInstance extends React.Component{
               {this.props.storage.capacity}
             </Card.Subtitle>        
           </Card.Body>
-          <Button variant="primary">Click To Buy</Button>
+          <Button variant="primary" id="selectedStorage" value={this.props.storage._id} onClick={this.addToBasket}>Click To Buy</Button>
         </Card>
       </div>
     )

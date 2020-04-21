@@ -1,6 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-
 import Button from 'react-bootstrap/Button';
 
 import '../App.css';
@@ -9,6 +8,14 @@ class CaseInstance extends React.Component{
 
   constructor(){
     super();
+
+    // Methods
+    this.addToBasket = this.addToBasket.bind(this);
+  }
+
+  // Methods
+  addToBasket(e){
+    sessionStorage.setItem(e.target.id, e.target.value);
   }
 
   render(){
@@ -26,7 +33,7 @@ class CaseInstance extends React.Component{
               {this.props.pcCase.size}
             </Card.Subtitle>        
           </Card.Body>
-          <Button variant="primary">Click To Buy</Button>
+          <Button variant="primary" id="selectedCase" value={this.props.pcCase._id} onClick={this.addToBasket}>Click To Buy</Button>
         </Card>
       </div>
     )

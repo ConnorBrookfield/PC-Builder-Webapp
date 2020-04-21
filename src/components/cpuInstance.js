@@ -7,6 +7,14 @@ class CpuInstance extends React.Component{
 
   constructor(){
     super();
+
+    // Methods
+    this.addToBasket = this.addToBasket.bind(this);
+  }
+
+  // Methods
+  addToBasket(e){
+    sessionStorage.setItem(e.target.id, e.target.value);
   }
 
   render(){
@@ -28,7 +36,7 @@ class CpuInstance extends React.Component{
               {this.props.cpu.socket}
             </Card.Subtitle>        
           </Card.Body>
-          <Button variant="primary">Click To Buy</Button>
+          <Button variant="primary" id="selectedCpu" value={this.props.cpu._id} onClick={this.addToBasket}>Click To Buy</Button>
         </Card>
       </div>
     )

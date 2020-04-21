@@ -2,8 +2,6 @@ import React from 'react';
 import Form from "react-bootstrap/Form";
 import Button from 'react-bootstrap/Button';
 import '../App.css';
-import AdminPanel from './adminPanel';
-import { Switch, Route, BrowserRouter, Redirect } from "react-router-dom";
 
 class Login extends React.Component{
     constructor(props){
@@ -20,9 +18,9 @@ class Login extends React.Component{
 
     // Handle Methods
     handleSubmit(){
-
         if(this.state.Email == "Admin@gmit.ie" && this.state.Password == "badCode"){
             this.props.history.push('/adminPanel');
+            document.cookie = {Email: this.state.Email, Password: this.state.Password} + ";path=/";
         }
     }
     handleEmail(e){

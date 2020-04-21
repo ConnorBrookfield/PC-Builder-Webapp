@@ -7,6 +7,14 @@ class CoolerInstance extends React.Component{
 
   constructor(){
     super();
+
+    // Methods
+    this.addToBasket = this.addToBasket.bind(this);
+  }
+
+  // Methods
+  addToBasket(e){
+    sessionStorage.setItem(e.target.id, e.target.value);
   }
 
   render(){
@@ -24,7 +32,7 @@ class CoolerInstance extends React.Component{
               {this.props.cooler.type}
             </Card.Subtitle>        
           </Card.Body>
-          <Button variant="primary">Click To Buy</Button>
+          <Button variant="primary" id="selectedCooler" value={this.props.cooler._id} onClick={this.addToBasket}>Click To Buy</Button>
         </Card>
       </div>
     )
