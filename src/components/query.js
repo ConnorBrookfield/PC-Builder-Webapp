@@ -60,29 +60,28 @@ class Query extends React.Component {
   render() {
       return (
           <div>
-              <div className="App">
               <h1><b>Query Page</b></h1>
               <h2>If You have a Query that needs help leave a comment and us or our community will help!</h2>
               <div class="bodyFormat">
-              <div class="centerElement">
-              <Form onSubmit={this.handleQuerySubmit}>
-              <Form.Group>
-                  <Form.Label>Name</Form.Label>
-                  <Form.Control as="input" value={this.state.Name} onChange={this.handleNameChange}/>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control as="input" value={this.state.Email} onChange={this.handleEmailChange}/>
-                </Form.Group>
-                <Form.Group>
-                  <Form.Label>Feedback</Form.Label>
-                  <Form.Control as="input" value={this.state.Feedback} onChange={this.handleFeedbackChange}/>
-                </Form.Group>
-                <Button variant="primary" type="submit">Add Query</Button>
-              </Form>
+                <div class="centerElement">
+                  <Form onSubmit={this.handleQuerySubmit}>
+                  <Form.Group>
+                      <Form.Label>Name</Form.Label>
+                      <Form.Control as="input" value={this.state.Name} onChange={this.handleNameChange}/>
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label>Email</Form.Label>
+                      <Form.Control as="input" value={this.state.Email} onChange={this.handleEmailChange}/>
+                    </Form.Group>
+                    <Form.Group>
+                      <Form.Label>Feedback</Form.Label>
+                      <Form.Control as="input" value={this.state.Feedback} onChange={this.handleFeedbackChange}/>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">Add Query</Button>
+                  </Form>
+                </div>
+               <br></br>
               </div>
-              </div>
-          </div>
           </div>
       );
   }

@@ -26,10 +26,10 @@ class ForumPage extends React.Component{
         <div>
           <h1><b>Forum Page!</b></h1>
           <h2>Welcome to the Forum page where your Querys are recieved for the community to see!!</h2>
-          <div class="aboutFormat">
-           <b>
-            <Forums theForums={this.state.forums} ReloadDataMethod={this.ReloadDataMethod}></Forums>
-            </b>
+          <div class="bodyFormat">
+          <CardDeck>
+              <Forums theForums={this.state.forums} ReloadDataMethod={this.ReloadDataMethod}></Forums>
+          </CardDeck>
           </div>
         </div>
       )

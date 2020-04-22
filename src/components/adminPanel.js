@@ -323,8 +323,8 @@ class AdminPanel extends React.Component {
     return (
       <div>
         <h1><b>AdminPanel</b></h1>
-        <div class="bodyFormat">
-          <Dropdown>
+        <br></br>
+        <Dropdown>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
               Add a Component!
             </Dropdown.Toggle>
@@ -340,6 +340,7 @@ class AdminPanel extends React.Component {
               <Dropdown.Item onSelect={this.toggleStorage}>Storage</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
+        <div class="bodyFormat">
           <div id="caseInput" hidden="true">
             <h1>Add a new Case!</h1>
             <div class="centerElement">
@@ -367,6 +368,7 @@ class AdminPanel extends React.Component {
                 <Button variant="primary" type="submit">Add Case</Button>
               </Form>
             </div>
+            <br></br>
           </div>
           <div id="cpuInput" hidden="true">
             <h1>Add a new CPU!</h1>
@@ -404,6 +406,7 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
+            <br></br>
           </div>          
           <div id="motherboardInput" hidden="true">
             <h1>Add a new Motherboard!</h1>
@@ -433,6 +436,7 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
+            <br></br>
           </div>
           <div id="gpuInput" hidden="true">
             <h1>Add a new Graphics Card!</h1>
@@ -466,6 +470,7 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
+            <br></br>
           </div>   
           <div id="psuInput" hidden="true">
             <h1>Add a new Power Supply!</h1>
@@ -498,7 +503,8 @@ class AdminPanel extends React.Component {
                 <Button variant="primary" type="submit">Add Power Supply</Button>
                 <br/>
               </Form>
-            </div>      
+            </div>    
+            <br></br>  
           </div>   
           <div id="ramInput" hidden="true">
             <h1>Add Ram!</h1>
@@ -532,6 +538,7 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
+            <br></br>
           </div>   
           <div id="storageInput" hidden="true">
             <h1>Add a new Storage Device!</h1>
@@ -565,6 +572,7 @@ class AdminPanel extends React.Component {
                 <br/>
               </Form>
             </div>
+            <br></br>
           </div>   
           <div id="coolingInput" hidden="true">
             <h1>Add a new Cooler!</h1>
@@ -591,11 +599,13 @@ class AdminPanel extends React.Component {
                   <Form.Control as="input" value={this.state.Artwork} onChange={this.handleArtworkChange}/>
                 </Form.Group>
                 <Button variant="primary" type="submit">Add Cooler</Button>
-                <br/>
               </Form>
             </div>
+            <br></br>
           </div>
         </div>
+        <br></br>
+        <br></br>
       </div>
     );
   }

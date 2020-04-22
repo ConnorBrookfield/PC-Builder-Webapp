@@ -42,16 +42,6 @@ class Home extends React.Component{
                 <Carousel.Caption><h3>ASRock TRX40 Taichi</h3></Carousel.Caption>
               </Carousel.Item>
             </Carousel>
-            <br></br>
-            <img
-            src="https://img.pngio.com/computer-update-delplogdelplog-funny-computer-png-814_555.png"
-            alt="Homepage pic"
-            height="300"
-            width="300"
-            />
-            <br></br>
-            <h2>It is {new Date().toLocaleTimeString()}.</h2>
-            <br></br>
           </div>
         </div>
       </div> 

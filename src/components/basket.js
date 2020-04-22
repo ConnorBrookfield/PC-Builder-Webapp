@@ -42,6 +42,12 @@ class Basket extends React.Component{
     var psuId = sessionStorage.getItem('selectedPsu');
 
     // Checking if Object ID's have been passed, if not, give error, and send back to buildPC
+    if (caseId == null || motherboardId == null ||
+      cpuId == null || ramId == null ||
+      gpuId == null || coolerId == null ||
+      storageId == null || psuId == null){
+        this.props.history.push('/buildPc');
+    }
 
     axios.get('http://localhost:4000/api/cases/' + caseId)
     .then((response)=>{
@@ -111,7 +117,8 @@ class Basket extends React.Component{
 
   render(){
     return(
-      <div><h1>Your Basket</h1>
+      <div>
+        <h1>Your Basket</h1>
         <div class="bodyFormat">
           <div class="mx-auto justify-content-center">
             <CardDeck>
@@ -268,6 +275,8 @@ class Basket extends React.Component{
             </CardDeck>
           </div>
         </div>
+        <br></br>
+        <br></br>
       </div>
     )
   }

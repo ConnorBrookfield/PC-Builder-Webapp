@@ -62,7 +62,8 @@ class Login extends React.Component{
                                 Submit
                             </Button>
                         </Form>
-                    </div>         
+                    </div>     
+                    <br></br>   
                 </div>
             </div>            
         )   
