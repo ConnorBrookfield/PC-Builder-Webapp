@@ -24,12 +24,12 @@ class ForumPage extends React.Component{
   render(){
       return(
         <div>
-          <h1>Forum Page!</h1>
+          <h1><b>Forum Page!</b></h1>
           <h2>Welcome to the Forum page where your Querys are recieved for the community to see!!</h2>
-          <div class="bodyFormat">
-           
+          <div class="aboutFormat">
+           <b>
             <Forums theForums={this.state.forums} ReloadDataMethod={this.ReloadDataMethod}></Forums>
-            
+            </b>
           </div>
         </div>
       )

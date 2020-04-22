@@ -15,7 +15,11 @@ class Query extends React.Component {
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleFeedbackChange = this.handleFeedbackChange.bind(this);
+    
+    
  }
+
+
 
  //Methods for setting variables to user input
  handleNameChange(e){
@@ -44,6 +48,8 @@ class Query extends React.Component {
     .catch();
 
     this.setState({ Name:"", Email:"", Feedback:""});    
+
+    
   }
 
   render() {
@@ -67,7 +73,7 @@ class Query extends React.Component {
                   <Form.Label>Feedback</Form.Label>
                   <Form.Control as="input" value={this.state.Feedback} onChange={this.handleFeedbackChange}/>
                 </Form.Group>
-                <Button variant="primary" type="submit">Add Query</Button>
+                <Button variant="primary" type="submit" onclick="btnClick">Add Query</Button>
               </Form>
               </div>
               </div>

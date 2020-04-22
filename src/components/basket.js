@@ -11,6 +11,7 @@ import '../App.css';
 import axios from "axios";
 import { CardDeck } from 'react-bootstrap';
 
+//setup page so when button is clicked it sends it to db in server that the basket recieves that data and outputs to page
 class Basket extends React.Component{
 
   state = {
@@ -26,7 +27,6 @@ class Basket extends React.Component{
 
   componentDidMount() {
     var caseId= sessionStorage.getItem('selectedCase');
-
     var motherboardId= sessionStorage.getItem('selectedMotherboard');
     var cpuId= sessionStorage.getItem('selectedCpu');
     var ramId= sessionStorage.getItem('selectedRam');

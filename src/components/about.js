@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import '../App.css';
+import { CardDeck } from 'react-bootstrap';
 
 class About extends React.Component{
 
@@ -8,23 +9,32 @@ class About extends React.Component{
     return(
       <div>
         <h1>About Us!</h1>
-        <div class="bodyFormat">
           <h2>Here is some information about ourselves</h2>
-          <ul> 
-            <li>Name: Jack Haugh</li>
-            <li>Age: 22</li>
-            <li>Birthday: 21st Of August</li>
-            <li>Hobbies: Computing, Rugby, Darts, music</li>
-            <li><Button href="https://github.com/JackH97">Click Button to go to Jack's GitHub</Button></li>
-          </ul>
-
+          <div class="aboutFormat">
+          <CardDeck>
+            <ul>
+            <b>
+            <p>Name: Jack Haugh</p>
+            <p>Age: 22</p>
+            <p>Birthday: 21st Of August</p>
+            <p>Hobbies: Computing, Rugby, Darts, music</p>
+            <p><Button href="https://github.com/JackH97">Click Button to go to Jack's GitHub</Button></p>
+            </b>
+            </ul>
+          
+          </CardDeck>
+<br></br>
+         <CardDeck>
           <ul>
-            <li>Name: Connor Brookfield</li>
-            <li>Age: 21</li>
-            <li>Birthday: 20th Of August</li>
-            <li>Hobbies: Computers, music, Gaming</li>
-            <li><Button href="https://github.com/G00361129">Click Button to go to Connor's GitHub</Button></li>
+            <b>
+            <p>Name: Connor Brookfield</p>
+            <p>Age: 21</p>
+            <p>Birthday: 20th Of August</p>
+            <p>Hobbies: Computers, music, Gaming</p>
+            <p><Button href="https://github.com/G00361129">Click Button to go to Connor's GitHub</Button></p>
+            </b>
           </ul>
+          </CardDeck>
         </div>
       </div>
     )

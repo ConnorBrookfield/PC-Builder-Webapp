@@ -39,7 +39,9 @@ class Login extends React.Component{
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Group controlId="formBasicEmail">
                                 <br></br>
+                                <b>
                                 <Form.Label>Email address</Form.Label>
+                                </b>
                                 <Form.Control type="email" placeholder="Enter email" onChange={this.handleEmail}/>
                                 <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
@@ -47,7 +49,9 @@ class Login extends React.Component{
                             </Form.Group>
 
                             <Form.Group controlId="formBasicPassword">
+                                <b>
                                 <Form.Label>Password</Form.Label>
+                                </b>
                                 <Form.Control type="password" placeholder="Password" onChange={this.handlePassword}/>
                             </Form.Group>
                             <Button variant="primary" type="submit">
