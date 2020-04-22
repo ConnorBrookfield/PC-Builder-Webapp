@@ -132,7 +132,7 @@ app.get('/api/motherboards/:id', (req, res) => {
     console.log(req.params.id);
 
     MotherboardModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({motherboards:data});
     })
 })
 app.get('/api/cpus', (req, res) => {
@@ -144,7 +144,7 @@ app.get('/api/cpus/:id', (req, res) => {
     console.log(req.params.id);
 
     CpuModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({cpus:data});
     })
 })
 app.get('/api/rams', (req, res) => {
@@ -156,7 +156,7 @@ app.get('/api/rams/:id', (req, res) => {
     console.log(req.params.id);
 
     RamModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({rams:data});
     })
 })
 app.get('/api/gpus', (req, res) => {
@@ -168,7 +168,7 @@ app.get('/api/gpus/:id', (req, res) => {
     console.log(req.params.id);
 
     GpuModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({gpus:data});
     })
 })
 app.get('/api/coolers', (req, res) => {
@@ -180,7 +180,7 @@ app.get('/api/coolers/:id', (req, res) => {
     console.log(req.params.id);
 
     CoolerModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({coolers:data});
     })
 })
 app.get('/api/storages', (req, res) => { 
@@ -192,7 +192,7 @@ app.get('/api/storages/:id', (req, res) => {
     console.log(req.params.id);
 
     StorageModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({storages:data});
     })
 })
 app.get('/api/psus', (req, res) => {
@@ -204,7 +204,7 @@ app.get('/api/psus/:id', (req, res) => {
     console.log(req.params.id);
 
     PsuModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({psus:data});
     })
 })
 app.get('/api/forums', (req, res) => {

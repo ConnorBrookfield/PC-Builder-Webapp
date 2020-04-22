@@ -12,7 +12,6 @@ import axios from "axios";
 import { CardDeck } from 'react-bootstrap';
 
 class BuildPC extends React.Component{
-
   state = {
     cases: [],
     motherboards: [],
