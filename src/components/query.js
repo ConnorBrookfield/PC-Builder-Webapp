@@ -15,11 +15,7 @@ class Query extends React.Component {
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleFeedbackChange = this.handleFeedbackChange.bind(this);
-    
-    
  }
-
-
 
  //Methods for setting variables to user input
  handleNameChange(e){
@@ -34,7 +30,9 @@ class Query extends React.Component {
 
   // Handle Submit Methods
   handleQuerySubmit(e){
-    e.preventDefault();
+    if(this.state.Name === null || this.state.Email === null || this.state.Feedback === null){
+      e.preventDefault();
+    //alert("Query sent to Forum Page");
     
     const newQuery = {
       name: this.state.Name,
@@ -47,7 +45,14 @@ class Query extends React.Component {
     .then()
     .catch();
 
-    this.setState({ Name:"", Email:"", Feedback:""});    
+    this.setState({ Name:"", Email:"", Feedback:""});  
+      alert("Thank You for your Query! It has been submitted to our Forum Page.")
+  }
+  else {
+      alert("All fields haven't text inserted! Please enter Text in all fields.")
+  }
+
+      
 
     
   }
@@ -73,7 +78,7 @@ class Query extends React.Component {
                   <Form.Label>Feedback</Form.Label>
                   <Form.Control as="input" value={this.state.Feedback} onChange={this.handleFeedbackChange}/>
                 </Form.Group>
-                <Button variant="primary" type="submit" onclick="btnClick">Add Query</Button>
+                <Button variant="primary" type="submit">Add Query</Button>
               </Form>
               </div>
               </div>

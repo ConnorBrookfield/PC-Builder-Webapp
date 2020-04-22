@@ -21,6 +21,10 @@ class Login extends React.Component{
         if(this.state.Email == "Admin@gmit.ie" && this.state.Password == "badCode"){
             this.props.history.push('/adminPanel');
             document.cookie = {Email: this.state.Email, Password: this.state.Password} + ";path=/";
+            //ask connor about the alert from not including @ on email entry
+        }
+        else {
+            alert("Login is incorrect! Try again.")
         }
     }
     handleEmail(e){
