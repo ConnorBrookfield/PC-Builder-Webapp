@@ -120,7 +120,7 @@ app.get('/api/cases/:id', (req, res) => {
     console.log(req.params.id);
 
     CaseModel.findById(req.params.id, (error,data)=>{
-        res.json(data);
+        res.json({cases:data});
     })
 })
 app.get('/api/motherboards', (req, res) => {

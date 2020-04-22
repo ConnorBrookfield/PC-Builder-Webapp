@@ -18,7 +18,7 @@ class Login extends React.Component{
 
     // Handle Methods
     handleSubmit(){
-        if(this.state.Email == "Admin@gmit.ie" && this.state.Password == "badCode"){
+        if(this.state.Email === "Admin@gmit.ie" && this.state.Password === "badCode"){
             this.props.history.push('/adminPanel');
             document.cookie = {Email: this.state.Email, Password: this.state.Password} + ";path=/";
             //ask connor about the alert from not including @ on email entry

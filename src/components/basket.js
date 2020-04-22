@@ -1,5 +1,5 @@
 import React from 'react';
-import Cases from "./cases";
+import BasketCase from "./basketCase";
 import Motherboards from "./motherboards";
 import Cpus from "./cpus";
 import Rams from "./rams";
@@ -42,6 +42,8 @@ class Basket extends React.Component{
     .catch((error)=>{
         console.log(error);
     });
+
+    alert(this.state.cpus);
 
     axios.get('http://localhost:4000/api/motherboards/' + motherboardId)
     .then((response)=>{
@@ -106,7 +108,7 @@ class Basket extends React.Component{
           <br></br>
           <h1>Cases</h1>
           <CardDeck>
-            <Cases theCases={this.state.cases} ReloadDataMethod={this.ReloadDataMethod}></Cases>              
+            <BasketCase key={this.state.cases.caseId} ReloadDataMethod={this.ReloadDataMethod}></BasketCase>              
           </CardDeck>
           <br></br>
           <h1>MotherBoards</h1>
