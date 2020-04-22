@@ -9,7 +9,7 @@ import Storages from "./storages";
 import Psus from "./psus";
 import '../App.css';
 import axios from "axios";
-import { CardDeck } from 'react-bootstrap';
+import { CardDeck, Button } from 'react-bootstrap';
 
 class BuildPC extends React.Component{
 
@@ -23,6 +23,15 @@ class BuildPC extends React.Component{
     storages: [],
     psus: []
   };
+
+
+
+
+
+
+  topFunction() {
+    document.body.scrollTop = 0;
+  }
 
   componentDidMount() {
     axios.get('http://localhost:4000/api/cases')
@@ -92,6 +101,7 @@ class BuildPC extends React.Component{
   render(){
     return(
       <div><h1>Welcome to the Build a PC page</h1>
+      <a name="top"></a>
         <div class="bodyFormat">
           <br></br>
           <h1>Cases</h1>
@@ -133,6 +143,8 @@ class BuildPC extends React.Component{
           <CardDeck>
             <Psus thePsus={this.state.psus} ReloadDataMethod={this.ReloadDataMethod}></Psus>              
           </CardDeck>
+          <Button href="#top">Back To Top</Button>
+          <Button variant="primary" href="/basket">Go To Basket</Button>
         </div>
       </div>
     )
