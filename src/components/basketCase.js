@@ -10,13 +10,7 @@ class BasketCase extends React.Component{
     super();
 
     // Methods
-    this.addToBasket = this.addToBasket.bind(this);
     this.removeFromBasket = this.removeFromBasket.bind(this);
-  }
-
-  // Methods
-  addToBasket(e){
-    sessionStorage.setItem(e.target.id, e.target.value);
   }
 
   removeFromBasket(e){
