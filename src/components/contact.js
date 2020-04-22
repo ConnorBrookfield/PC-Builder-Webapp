@@ -5,11 +5,12 @@ import axios from "axios";
 
 
 class Contact extends React.Component{
-
+// Variables
   state = {
       forums: []
   }
 
+//Method called before render, gets thee forum data from the Express API
   componentDidMount() {
       axios.get('http://localhost:4000/api/forums')
       .then((response)=>{
@@ -20,6 +21,7 @@ class Contact extends React.Component{
       });
   }
 
+  // Displays
   render(){
       return(
         <div>

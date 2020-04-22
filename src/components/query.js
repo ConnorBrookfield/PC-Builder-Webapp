@@ -8,16 +8,17 @@ class Query extends React.Component {
  constructor(props){
     super(props);
 
+    // State Object
     this.state = {Name:"", Email:"", Feedback:""};
 
+    // Handle Method Declaration
     this.handleQuerySubmit = this.handleQuerySubmit.bind(this);
-
     this.handleNameChange = this.handleNameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleFeedbackChange = this.handleFeedbackChange.bind(this);
  }
 
- //Methods for setting variables to user input
+ //Method definitions for setting variables to user input
  handleNameChange(e){
     this.setState({Name: e.target.value});
   }
@@ -30,9 +31,8 @@ class Query extends React.Component {
 
   // Handle Submit Methods
   handleQuerySubmit(e){
-    if(this.state.Name === null || this.state.Email === null || this.state.Feedback === null){
+    if(this.state.Name != null && this.state.Email != null && this.state.Feedback != null){
       e.preventDefault();
-    //alert("Query sent to Forum Page");
     
     const newQuery = {
       name: this.state.Name,
@@ -47,14 +47,10 @@ class Query extends React.Component {
 
     this.setState({ Name:"", Email:"", Feedback:""});  
       alert("Thank You for your Query! It has been submitted to our Forum Page.")
-  }
-  else {
-      alert("All fields haven't text inserted! Please enter Text in all fields.")
-  }
-
-      
-
-    
+    }
+    else {
+        alert("All fields haven't text inserted! Please enter Text in all fields.")
+    } 
   }
 
   render() {

@@ -16,16 +16,15 @@ class BuildPC extends React.Component{
   constructor(){
     super();
 
-    // Methods
+    // Show AlertBar Method declaration
     this.showAlertBar = this.showAlertBar.bind(this);
   }
   componentWillUpdate()
   {
-    // Variables
+    // Checking if all components have a selected item, added to basket 
     if(sessionStorage.getItem("selectedCase") == null){
       this.chosenCase = "Case";
       this.showAlertBar();
-
     }
     if(sessionStorage.getItem("selectedPsu") == null){
       this.chosenPsu = "Psu";
@@ -57,6 +56,7 @@ class BuildPC extends React.Component{
     }
   }
 
+  // showAlertBar Method Definition
   showAlertBar(e){
     document.getElementById("alertBar").hidden = false;
   }
@@ -72,6 +72,7 @@ class BuildPC extends React.Component{
     psus: []
   };
 
+  // ComponentDidMount Method is called first when the component/js page is loaded, before render
   componentDidMount() {
     axios.get('http://localhost:4000/api/cases')
     .then((response)=>{

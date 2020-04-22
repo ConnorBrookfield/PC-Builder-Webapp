@@ -9,11 +9,11 @@ class CaseInstance extends React.Component{
   constructor(){
     super();
 
-    // Methods
+    // Add to basket method declaration
     this.addToBasket = this.addToBasket.bind(this);
   }
 
-  // Methods
+  // Add to Basket method Definition
   addToBasket(e){
     sessionStorage.setItem(e.target.id, e.target.value);
   }

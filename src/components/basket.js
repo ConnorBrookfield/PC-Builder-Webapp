@@ -20,10 +20,11 @@ class Basket extends React.Component{
       psu: {}
     };
 
-    // Handle Methods
+    // Method Declaration
     this.removeFromBasket = this.removeFromBasket.bind(this);
 }
 
+// Remove Basket Method
   removeFromBasket(e){
     sessionStorage.removeItem(e.target.id);
     alert("Item removed from Basket!");
@@ -49,6 +50,7 @@ class Basket extends React.Component{
         this.props.history.push('/buildPc');
     }
 
+    // Axios API request Methods
     axios.get('http://localhost:4000/api/cases/' + caseId)
     .then((response)=>{
         this.setState({case: response.data.cases})
@@ -121,6 +123,8 @@ class Basket extends React.Component{
         <h1>Your Basket</h1>
         <div class="bodyFormat">
           <div class="mx-auto justify-content-center">
+            {/* Card Deck, with the Cards displayed from locally stored object id's,
+            that were added to basket */}
             <CardDeck>
               <div class="mx-auto justify-content-center">
                 <Card className="bg-dark m-5" border="primary" style={{ width: '15.000rem', height: "28rem" }}>
